@@ -38,13 +38,11 @@ namespace Glabgiri.DAL.UnitOfWork
                 return _customerrepository;
             }
         }
-
-        public void Save() => _db.SaveChanges();
-        public async Task<int> SaveAsync() => await _db.SaveChangesAsync();
+        public async Task SaveAsync() => await _db.SaveChangesAsync();
 
         public void Dispose()
         {
-            _db.Dispose();
+             _db.Dispose();
         }
     }
 }

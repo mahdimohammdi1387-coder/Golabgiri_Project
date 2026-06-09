@@ -12,9 +12,9 @@ namespace Glabgiri.DAL.IRepositories
         Task<IEnumerable<TEntity>> GetAllAsync();
         IQueryable<TEntity> GetAllQueryable(Expression<Func<TEntity, bool>> where = null);
         Task<TEntity> GetByIdAsync(int id);
-        void Insert(TEntity entity);
-        void Update(TEntity entity);
-        void Delete(TEntity entity);
-        void DeleteByid(int id);
+        Task<bool> Insert(TEntity entity);
+        Task<bool> Update(TEntity entity);
+        Task<bool> Delete(TEntity entity);
+        Task<bool> DeleteByid(int id);
     }
 }

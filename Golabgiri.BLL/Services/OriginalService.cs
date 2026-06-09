@@ -21,9 +21,9 @@ namespace Golabgiri.BLL.Services
             db.Dispose();
         }
 
-        public void Save()
+        public async Task SaveAsync()
         {
-           db?.Save();
+          await db.SaveAsync();
         }
     }
 }

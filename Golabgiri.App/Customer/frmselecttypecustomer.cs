@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Golabgiri.BLL.IServices;
+using Golabgiri.BLL.Services;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,27 +15,32 @@ namespace Golabgiri.App.Customer
 {
     public partial class frmselecttypecustomer : Form
     {
-        public frmselecttypecustomer()
+        ICustomerService _customerService;
+        IServiceProvider _serviceProvider;
+        public frmselecttypecustomer(ICustomerService customerService,IServiceProvider serviceProvider)
         {
             InitializeComponent();
+            _customerService = customerService;
+            _serviceProvider = serviceProvider;
         }
 
         private void btnclose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        frmAddOrEditcustomer frm = new frmAddOrEditcustomer();
+       
         private void piccompany_Click(object sender, EventArgs e)
         {
-           
+            var frm = _serviceProvider.GetRequiredService<frmAddOrEditcustomer>();
             frm.company = true;
             frm.person=false;
             this.Close();
             frm.ShowDialog();
         }
 
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        private void picPerson_Click(object sender, EventArgs e)
         {
+            var frm = _serviceProvider.GetRequiredService<frmAddOrEditcustomer>();
             this.Close();
             frm.ShowDialog();
         }

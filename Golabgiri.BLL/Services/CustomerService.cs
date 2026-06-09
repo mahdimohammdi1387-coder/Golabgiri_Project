@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace Golabgiri.BLL.Services
 {
-    public class CustomerService:OriginalService ,ICustomerService
+    public class CustomerService:ICustomerService
     {
         private IUnitOfWork db;
         private readonly IMapper _mapper;
@@ -28,12 +28,12 @@ namespace Golabgiri.BLL.Services
             var customer = _mapper.Map<Customer>(info);
             try
             {
-                db.CustomerRepository.Insert(customer);
+                await db.CustomerRepository.Insert(customer);
+               
                 return true;
             }
             catch 
             {
-
                 return false;
             }
         }
@@ -47,6 +47,26 @@ namespace Golabgiri.BLL.Services
         public async Task<CustomerDTO> GetCustomerByIdAsync(int id)
         {
             return _mapper.Map<CustomerDTO> (await db.CustomerRepository.GetByIdAsync(id));
+        }
+
+        public async Task<bool> UpdateCustomerAsync(CustomerDTO info)
+        {
+            var customer=_mapper.Map<Customer>(info);
+            try
+            {
+               await db.CustomerRepository.Update(customer);
+              
+                return true;
+            }
+            catch 
+            {
+                return false;
+            }
+        }
+
+        public async Task SaveAsync()
+        {
+            await db.SaveAsync();
         }
     }
 }

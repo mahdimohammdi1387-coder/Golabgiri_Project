@@ -8,7 +8,7 @@ namespace Golabgiri.BLL.IServices
 {
     public interface IOriginalService
     {
-        void Save();
+        Task SaveAsync();
         void Dispose();
     }
 }

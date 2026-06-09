@@ -7,10 +7,12 @@ using System.Threading.Tasks;
 
 namespace Golabgiri.BLL.IServices
 {
-    public interface ICustomerService:IOriginalService
+    public interface ICustomerService
     {
         Task<bool> InsertCustomerAsync(CustomerDTO info);
+        Task<bool> UpdateCustomerAsync(CustomerDTO info);
         Task<List<CustomerDTO>> GetAllCustomerAsync();
         Task<CustomerDTO> GetCustomerByIdAsync(int id);
+        Task SaveAsync();
     }
 }

@@ -36,19 +36,19 @@
             this.lblpersonfamily = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.requiredFieldValidator1 = new ValidationComponents.RequiredFieldValidator(this.components);
             this.txtname = new Guna.UI2.WinForms.Guna2TextBox();
-            this.requiredFieldValidator2 = new ValidationComponents.RequiredFieldValidator(this.components);
             this.txtfamily = new Guna.UI2.WinForms.Guna2TextBox();
-            this.requiredFieldValidator3 = new ValidationComponents.RequiredFieldValidator(this.components);
             this.txtphonenumber = new Guna.UI2.WinForms.Guna2TextBox();
-            this.requiredFieldValidator4 = new ValidationComponents.RequiredFieldValidator(this.components);
             this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblcompanyphne = new System.Windows.Forms.Label();
             this.lblcompany = new System.Windows.Forms.Label();
             this.txtcompanyphne = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtcompanny = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnclose = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.requiredFieldValidator1 = new ValidationComponents.RequiredFieldValidator(this.components);
+            this.requiredFieldValidator2 = new ValidationComponents.RequiredFieldValidator(this.components);
+            this.requiredFieldValidator3 = new ValidationComponents.RequiredFieldValidator(this.components);
+            this.requiredFieldValidator4 = new ValidationComponents.RequiredFieldValidator(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.btnclose)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,13 +112,6 @@
             this.label4.TabIndex = 12;
             this.label4.Text = ":آدرس طرف حساب";
             // 
-            // requiredFieldValidator1
-            // 
-            this.requiredFieldValidator1.CancelFocusChangeWhenInvalid = false;
-            this.requiredFieldValidator1.ControlToValidate = this.txtname;
-            this.requiredFieldValidator1.ErrorMessage = "نام طرف حساب را وارد کنید";
-            this.requiredFieldValidator1.Icon = ((System.Drawing.Icon)(resources.GetObject("requiredFieldValidator1.Icon")));
-            // 
             // txtname
             // 
             this.txtname.Animated = true;
@@ -143,13 +136,6 @@
             this.txtname.Size = new System.Drawing.Size(728, 47);
             this.txtname.TabIndex = 2;
             // 
-            // requiredFieldValidator2
-            // 
-            this.requiredFieldValidator2.CancelFocusChangeWhenInvalid = false;
-            this.requiredFieldValidator2.ControlToValidate = this.txtfamily;
-            this.requiredFieldValidator2.ErrorMessage = "فامیلی طرف حساب را وارد کنید";
-            this.requiredFieldValidator2.Icon = ((System.Drawing.Icon)(resources.GetObject("requiredFieldValidator2.Icon")));
-            // 
             // txtfamily
             // 
             this.txtfamily.Animated = true;
@@ -169,19 +155,11 @@
             this.txtfamily.Location = new System.Drawing.Point(18, 172);
             this.txtfamily.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.txtfamily.Name = "txtfamily";
-            this.txtfamily.PasswordChar = '.';
             this.txtfamily.PlaceholderText = "نام خانوادگی";
             this.txtfamily.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtfamily.SelectedText = "";
             this.txtfamily.Size = new System.Drawing.Size(728, 49);
             this.txtfamily.TabIndex = 3;
-            // 
-            // requiredFieldValidator3
-            // 
-            this.requiredFieldValidator3.CancelFocusChangeWhenInvalid = false;
-            this.requiredFieldValidator3.ControlToValidate = this.txtphonenumber;
-            this.requiredFieldValidator3.ErrorMessage = "شماره تلفن طرف حساب را وارد کنید";
-            this.requiredFieldValidator3.Icon = ((System.Drawing.Icon)(resources.GetObject("requiredFieldValidator3.Icon")));
             // 
             // txtphonenumber
             // 
@@ -202,19 +180,11 @@
             this.txtphonenumber.Location = new System.Drawing.Point(18, 271);
             this.txtphonenumber.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.txtphonenumber.Name = "txtphonenumber";
-            this.txtphonenumber.PasswordChar = '.';
             this.txtphonenumber.PlaceholderText = "شماره تلفن یا موبایل";
             this.txtphonenumber.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtphonenumber.SelectedText = "";
             this.txtphonenumber.Size = new System.Drawing.Size(728, 48);
             this.txtphonenumber.TabIndex = 5;
-            // 
-            // requiredFieldValidator4
-            // 
-            this.requiredFieldValidator4.CancelFocusChangeWhenInvalid = false;
-            this.requiredFieldValidator4.ControlToValidate = this.txtAddress;
-            this.requiredFieldValidator4.ErrorMessage = "آدرس طرف حساب را وارد کنید";
-            this.requiredFieldValidator4.Icon = ((System.Drawing.Icon)(resources.GetObject("requiredFieldValidator4.Icon")));
             // 
             // txtAddress
             // 
@@ -235,7 +205,6 @@
             this.txtAddress.Location = new System.Drawing.Point(14, 370);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.PasswordChar = '.';
             this.txtAddress.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtAddress.PlaceholderText = "  ...آدرسی برای طرف حساب بیافزایید";
             this.txtAddress.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -284,7 +253,6 @@
             this.txtcompanyphne.Location = new System.Drawing.Point(23, 220);
             this.txtcompanyphne.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.txtcompanyphne.Name = "txtcompanyphne";
-            this.txtcompanyphne.PasswordChar = '.';
             this.txtcompanyphne.PlaceholderText = "شماره تلفن یا موبایل";
             this.txtcompanyphne.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtcompanyphne.SelectedText = "";
@@ -331,6 +299,34 @@
             this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             this.btnclose.MouseHover += new System.EventHandler(this.btnclose_MouseHover);
             // 
+            // requiredFieldValidator1
+            // 
+            this.requiredFieldValidator1.CancelFocusChangeWhenInvalid = false;
+            this.requiredFieldValidator1.ControlToValidate = this.txtname;
+            this.requiredFieldValidator1.ErrorMessage = "نام طرف حساب را وارد کنید";
+            this.requiredFieldValidator1.Icon = ((System.Drawing.Icon)(resources.GetObject("requiredFieldValidator1.Icon")));
+            // 
+            // requiredFieldValidator2
+            // 
+            this.requiredFieldValidator2.CancelFocusChangeWhenInvalid = false;
+            this.requiredFieldValidator2.ControlToValidate = this.txtfamily;
+            this.requiredFieldValidator2.ErrorMessage = "فامیلی طرف حساب را وارد کنید";
+            this.requiredFieldValidator2.Icon = ((System.Drawing.Icon)(resources.GetObject("requiredFieldValidator2.Icon")));
+            // 
+            // requiredFieldValidator3
+            // 
+            this.requiredFieldValidator3.CancelFocusChangeWhenInvalid = false;
+            this.requiredFieldValidator3.ControlToValidate = this.txtphonenumber;
+            this.requiredFieldValidator3.ErrorMessage = "شماره تلفن طرف حساب را وارد کنید";
+            this.requiredFieldValidator3.Icon = ((System.Drawing.Icon)(resources.GetObject("requiredFieldValidator3.Icon")));
+            // 
+            // requiredFieldValidator4
+            // 
+            this.requiredFieldValidator4.CancelFocusChangeWhenInvalid = false;
+            this.requiredFieldValidator4.ControlToValidate = this.txtAddress;
+            this.requiredFieldValidator4.ErrorMessage = "آدرس طرف حساب را وارد کنید";
+            this.requiredFieldValidator4.Icon = ((System.Drawing.Icon)(resources.GetObject("requiredFieldValidator4.Icon")));
+            // 
             // frmAddOrEditcustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
@@ -368,7 +364,6 @@
 
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2PictureBox btnclose;
-        private Guna.UI2.WinForms.Guna2Button btnsabt;
         private System.Windows.Forms.Label lblpersonfamily;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -385,5 +380,6 @@
         private System.Windows.Forms.Label lblcompany;
         public Guna.UI2.WinForms.Guna2TextBox txtcompanyphne;
         public Guna.UI2.WinForms.Guna2TextBox txtcompanny;
+        public Guna.UI2.WinForms.Guna2Button btnsabt;
     }
 }

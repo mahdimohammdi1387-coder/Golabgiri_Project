@@ -53,8 +53,9 @@ namespace Golabgiri.App
 
         private void btnnewPerson_Click(object sender, EventArgs e)
         {
-            frmselecttypecustomer frm=new frmselecttypecustomer();
-            frm.ShowDialog();
+            var frm = _serviceProvider.GetRequiredService<frmselecttypecustomer>();
+            if (frm.ShowDialog() == DialogResult.OK)
+                Customer_Load();
         }
 
         private async void btnUpdate_Click(object sender, EventArgs e)
@@ -63,12 +64,14 @@ namespace Golabgiri.App
             {
                 int id = int.Parse(dgvCustomer.CurrentRow.Cells[0].Value.ToString());
                 var customer=await _customerService.GetCustomerByIdAsync(id);
-                frmAddOrEditcustomer frm=new frmAddOrEditcustomer();
+                var frm = _serviceProvider.GetRequiredService<frmAddOrEditcustomer>();
                 frm.lblsubject.Text = "ویرایش طرف حساب";
+                frm.btnsabt.Text = "ویرایش طرف حساب";
                 if (customer.CustomerType==1)
                 {
 
                     frm.txtname.Text = customer.name;
+                    frm.ID = customer.Id;
                     frm.txtfamily.Text = customer.family;
                     frm.txtphonenumber.Text = customer.phoneNumber;
                 }
@@ -81,7 +84,9 @@ namespace Golabgiri.App
                 }
                    
                 frm.txtAddress.Text = customer.address;
-                frm.ShowDialog();
+                frm.status = true;
+                if (frm.ShowDialog() == DialogResult.OK)
+                    Customer_Load();
             }
             else
                 RtlMessageBox.Show("ابتدا یک طرف حساب را مشخص کنید","توجه",MessageBoxButtons.OK,MessageBoxIcon.Warning);

@@ -19,19 +19,36 @@ namespace Glabgiri.DAL.Repositories
             _db = db;
             _dbset = _db.Set<TEntity>();
         }
-        public virtual void Delete(TEntity entity)
+        public async Task<bool> Delete(TEntity entity)
         {
-            if (_db.Entry(entity).State == EntityState.Detached)
+            try
             {
-                _dbset.Attach(entity);
+                if (_db.Entry(entity).State == EntityState.Detached)
+                {
+                    _dbset.Attach(entity);
+                }
+                _dbset.Remove(entity);
+                return true;
             }
-            _dbset.Remove(entity);
+            catch 
+            {
+                return false;
+            }
         }
 
-        public virtual void DeleteByid(int id)
+        public async Task<bool> DeleteByid(int id)
         {
-            var entity = _dbset.Find(id);
-            Delete(entity);
+            try
+            {
+                var entity = _dbset.Find(id);
+                await Delete(entity);
+                return true;
+            }
+            catch 
+            {
+
+                return false;
+            }
         }
 
         public async Task<IEnumerable<TEntity>> GetAllAsync()
@@ -50,21 +67,50 @@ namespace Glabgiri.DAL.Repositories
 
         public async Task<TEntity> GetByIdAsync(int id)
         {
-            return await _dbset.FindAsync(id);
-        }
-
-        public virtual void Insert(TEntity entity)
-        {
-            _dbset.Add(entity);
-        }
-
-        public virtual void Update(TEntity entity)
-        {
-            if (_db.Entry(entity).State == EntityState.Detached)
+            try
             {
-                _dbset.Attach(entity);
+                return await _dbset.FindAsync(id);
             }
-            _db.Entry(entity).State = EntityState.Modified;
+            catch
+            {
+
+                return null;
+            }
+           
+        }
+
+        public async Task<bool> Insert(TEntity entity)
+        {
+            try
+            {
+                _dbset.Add(entity);
+                return true;
+            }
+            catch 
+            {
+
+                return false;
+            }
+           
+        }
+
+        public async Task<bool> Update(TEntity entity)
+        {
+            try
+            {
+                if (_db.Entry(entity).State == EntityState.Detached)
+                {
+                    _dbset.Attach(entity);
+                }
+                _db.Entry(entity).State = EntityState.Modified;
+                return true;
+            }
+            catch 
+            {
+
+                return false;
+            }
+               
         }
     }
 }
