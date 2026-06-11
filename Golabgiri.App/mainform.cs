@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Golabgiri.App.Product;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +22,22 @@ namespace Golabgiri.App
             _serviceProvider = serviceProvider;
         }
         public int i = 0;
-        private void label3_Click(object sender, EventArgs e)
+
+        private void picproduct_Click(object sender, EventArgs e)
+        {
+            if (i == 0)
+            {
+                var frm = _serviceProvider.GetRequiredService<frmProduct>();
+                frm.ShowDialog();
+            }
+        }
+
+        private void btnclose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void lblcustomer_Click(object sender, EventArgs e)
         {
             if (i == 0)
             {
@@ -32,7 +48,7 @@ namespace Golabgiri.App
 
         private void guna2PictureBox2_Click(object sender, EventArgs e)
         {
-           Application.Exit();
+
         }
     }
 }

@@ -16,19 +16,19 @@ namespace Golabgiri.BLL.Services
 {
     public class CustomerService:ICustomerService
     {
-        private IUnitOfWork db;
+        private readonly IUnitOfWork _db;
         private readonly IMapper _mapper;
         public CustomerService(IMapper mapper,IUnitOfWork unitOfWork)
         {
             _mapper = mapper;
-            db = unitOfWork;
+            _db = unitOfWork;
         }
         public async Task<bool> InsertCustomerAsync(CustomerDTO info)
         {
             var customer = _mapper.Map<Customer>(info);
             try
             {
-                await db.CustomerRepository.Insert(customer);
+                await _db.CustomerRepository.Insert(customer);
                
                 return true;
             }
@@ -37,16 +37,16 @@ namespace Golabgiri.BLL.Services
                 return false;
             }
         }
-        public async Task<List<CustomerDTO>> GetAllCustomerAsync()
+        public async Task<IEnumerable<CustomerDTO>> GetAllCustomerAsync()
         {
-                var customers = await db.CustomerRepository.GetAllAsync();
+                var customers = await _db.CustomerRepository.GetAllAsync();
             return customers.Select(c => _mapper.Map<CustomerDTO>(c)).ToList();
 
         }
 
         public async Task<CustomerDTO> GetCustomerByIdAsync(int id)
         {
-            return _mapper.Map<CustomerDTO> (await db.CustomerRepository.GetByIdAsync(id));
+            return _mapper.Map<CustomerDTO> (await _db.CustomerRepository.GetByIdAsync(id));
         }
 
         public async Task<bool> UpdateCustomerAsync(CustomerDTO info)
@@ -54,7 +54,7 @@ namespace Golabgiri.BLL.Services
             var customer=_mapper.Map<Customer>(info);
             try
             {
-               await db.CustomerRepository.Update(customer);
+               await _db.CustomerRepository.Update(customer);
               
                 return true;
             }
@@ -66,7 +66,12 @@ namespace Golabgiri.BLL.Services
 
         public async Task SaveAsync()
         {
-            await db.SaveAsync();
+            await _db.SaveAsync();
+        }
+
+        public void Save()
+        {
+            _db.Save();
         }
     }
 }

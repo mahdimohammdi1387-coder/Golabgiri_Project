@@ -34,15 +34,15 @@ namespace Golabgiri.App.Customer
             var frm = _serviceProvider.GetRequiredService<frmAddOrEditcustomer>();
             frm.company = true;
             frm.person=false;
-            this.Close();
-            frm.ShowDialog();
+            if(frm.ShowDialog()==DialogResult.OK)
+                DialogResult = DialogResult.OK;
         }
 
         private void picPerson_Click(object sender, EventArgs e)
         {
             var frm = _serviceProvider.GetRequiredService<frmAddOrEditcustomer>();
-            this.Close();
-            frm.ShowDialog();
+            if (frm.ShowDialog() == DialogResult.OK)
+                DialogResult = DialogResult.OK;
         }
     }
 }

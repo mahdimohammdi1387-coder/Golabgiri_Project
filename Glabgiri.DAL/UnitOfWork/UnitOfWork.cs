@@ -16,6 +16,7 @@ namespace Glabgiri.DAL.UnitOfWork
         private readonly AraghijatDbContext _db;
         private ILoginRepository _loginrepository;
         private ICustomerRepository _customerrepository;
+        private IProductRepository _productRepository;
         public UnitOfWork()
         {
             _db = new AraghijatDbContext();
@@ -36,6 +37,15 @@ namespace Glabgiri.DAL.UnitOfWork
                 if (_customerrepository == null)
                     _customerrepository = new CustomerRepository(_db);
                 return _customerrepository;
+            }
+        }
+        public IProductRepository ProductRepository
+        {
+            get
+            {
+                if(_productRepository==null)
+                    _productRepository=new ProductRepository(_db);
+                return _productRepository;
             }
         }
         public async Task SaveAsync() => await _db.SaveChangesAsync();

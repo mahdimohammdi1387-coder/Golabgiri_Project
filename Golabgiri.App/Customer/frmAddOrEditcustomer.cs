@@ -41,6 +41,11 @@ namespace Golabgiri.App.Customer
         }
         public void companyOrPerson(bool company,bool person)
         {
+            //if(ID==0)
+            //{
+            //    var frm = _serviceprovider.GetRequiredService<frmselecttypecustomer>();
+            //    frm.ShowDialog();
+            //}
             if(company==true)
             {
                 requiredFieldValidator1.ControlToValidate = txtcompanny;
@@ -57,42 +62,46 @@ namespace Golabgiri.App.Customer
 
         }
         public int ID = 0;
+        public decimal credit = 0;
+        public decimal debit = 0;
         private async void btnsabt_Click(object sender, EventArgs e)
         {
             if (BaseValidator.IsFormValid(this.components))
             {
                 bool flag=false;
                 CustomerDTO customerdto = new CustomerDTO();
-                customerdto.name = txtname.Text;
                 customerdto.family = txtfamily.Text;
                 customerdto.address = txtAddress.Text;
                 if (company == true)
                 {
                     customerdto.phoneNumber = txtcompanyphne.Text;
                     customerdto.CustomerType = 2;
+                    customerdto.name = txtcompanny.Text;
                 }
                 else
                 {
+                    customerdto.name = txtname.Text;
                     customerdto.phoneNumber = txtphonenumber.Text;
                     customerdto.CustomerType = 1;
                 }
                
                 if (status==false)
                 {
-                    customerdto.credit = 0;
-                    customerdto.debit = 0;
+                    //customerdto.credit = 0;
+                    //customerdto.debit = 0;
                     flag =await _customerservice.InsertCustomerAsync(customerdto);
-                    await _customerservice.SaveAsync();
+                   
                 }
                 else
                 {
                     customerdto.Id = ID;
+                    customerdto.credit = credit;
+                    customerdto.debit = debit;
                     flag= await _customerservice.UpdateCustomerAsync(customerdto);
-                    await _customerservice.SaveAsync();
                 }
                 if (flag)
                 {
-                    
+                   await _customerservice.SaveAsync();
                     DialogResult = DialogResult.OK;
                 }
                 else

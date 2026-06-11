@@ -63,6 +63,16 @@ namespace Golabgiri.App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1370791030_credit_card {
+            get {
+                object obj = ResourceManager.GetObject("1370791030_credit-card", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1371475930_filenew {
             get {
                 object obj = ResourceManager.GetObject("1371475930_filenew", resourceCulture);
@@ -86,6 +96,36 @@ namespace Golabgiri.App.Properties {
         internal static System.Drawing.Bitmap _1371476007_Close_Box_Red {
             get {
                 object obj = ResourceManager.GetObject("1371476007_Close_Box_Red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1371476070_self1 {
+            get {
+                object obj = ResourceManager.GetObject("1371476070_self1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1371476143_deliverables {
+            get {
+                object obj = ResourceManager.GetObject("1371476143_deliverables", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1371476499_todo_list {
+            get {
+                object obj = ResourceManager.GetObject("1371476499_todo-list", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,6 +183,16 @@ namespace Golabgiri.App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_cheque_240px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_cheque_240px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_close_24px {
             get {
                 object obj = ResourceManager.GetObject("icons8_close_24px", resourceCulture);
@@ -163,9 +213,49 @@ namespace Golabgiri.App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_empty_box_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_empty_box_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_initiate_money_transfer_40px_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_initiate_money_transfer_40px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Name_64px {
             get {
                 object obj = ResourceManager.GetObject("icons8_Name_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_product_64px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_product_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_refund_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_refund_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,6 +273,16 @@ namespace Golabgiri.App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_transaction_approved_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_transaction_approved_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_users_48px {
             get {
                 object obj = ResourceManager.GetObject("icons8_users_48px", resourceCulture);
@@ -193,9 +293,49 @@ namespace Golabgiri.App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_view_delivery_64px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_view_delivery_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap invisible_96px {
             get {
                 object obj = ResourceManager.GetObject("invisible_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap servicesCosts {
+            get {
+                object obj = ResourceManager.GetObject("servicesCosts", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap تصویر_صفحه_2026_06_11_184414 {
+            get {
+                object obj = ResourceManager.GetObject("تصویر صفحه 2026-06-11 184414", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap تصویر_صفحه_2026_06_11_204304 {
+            get {
+                object obj = ResourceManager.GetObject("تصویر صفحه 2026-06-11 204304", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

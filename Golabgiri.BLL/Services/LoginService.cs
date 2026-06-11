@@ -30,7 +30,7 @@ namespace Golabgiri.BLL.Services
             var entity = _mapper.Map<Login>(info); ;
             try
             {
-                _db.LoginRepository.Update(entity);
+              await _db.LoginRepository.Update(entity);
                 return true;
             }
             catch

@@ -72,5 +72,11 @@ namespace Golabgiri.App
                 isPasswordVisible = true;
             }
         }
+
+        private void btnclose_Click(object sender, EventArgs e)
+        {
+            if(RtlMessageBox.Show("آیا مطمئن هستید که میخواهید خارج شوید","توجه",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+            Application.Exit();
+        }
     }
 }

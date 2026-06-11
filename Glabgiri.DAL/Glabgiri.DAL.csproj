@@ -93,6 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\AraghijatDbContext.cs" />
+    <Compile Include="IRepositories\IProductRepository.cs" />
     <Compile Include="Migrations\202606072122157_Add_CustomerType.cs" />
     <Compile Include="Migrations\202606072122157_Add_CustomerType.Designer.cs">
       <DependentUpon>202606072122157_Add_CustomerType.cs</DependentUpon>
@@ -101,6 +102,7 @@
     <Compile Include="Migrations\202606080713036_Change_Customer.Designer.cs">
       <DependentUpon>202606080713036_Change_Customer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Repositories\ProductRepository.cs" />
     <Compile Include="UnitOfWork\IUnitOfWork.cs" />
     <Compile Include="UnitOfWork\UnitOfWork.cs" />
     <Compile Include="IRepositories\ICustomerRepository.cs" />
@@ -124,6 +126,10 @@
     <ProjectReference Include="..\Golabgiri.Domain\Golabgiri.Domain.csproj">
       <Project>{1427f0b7-4a10-4c2e-9928-753ad3c9da75}</Project>
       <Name>Golabgiri.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Golabgiri.ViewModel\Golabgiri.ViewModel.csproj">
+      <Project>{47AEC6FA-A0C6-40E7-8A99-39501D1265E1}</Project>
+      <Name>Golabgiri.ViewModel</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -11,8 +11,9 @@ namespace Golabgiri.BLL.IServices
     {
         Task<bool> InsertCustomerAsync(CustomerDTO info);
         Task<bool> UpdateCustomerAsync(CustomerDTO info);
-        Task<List<CustomerDTO>> GetAllCustomerAsync();
+        Task<IEnumerable<CustomerDTO>> GetAllCustomerAsync();
         Task<CustomerDTO> GetCustomerByIdAsync(int id);
         Task SaveAsync();
+        void Save();
     }
 }

@@ -36,17 +36,23 @@
             this.guna2Shapes2 = new Guna.UI2.WinForms.Guna2Shapes();
             this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
-            this.requiredFieldValidator1 = new ValidationComponents.RequiredFieldValidator(this.components);
-            this.requiredFieldValidator2 = new ValidationComponents.RequiredFieldValidator(this.components);
             this.btnLogin = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUseName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnclose = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.requiredFieldValidator1 = new ValidationComponents.RequiredFieldValidator(this.components);
+            this.requiredFieldValidator2 = new ValidationComponents.RequiredFieldValidator(this.components);
             this.panelRight.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnclose)).BeginInit();
             this.SuspendLayout();
             // 
             // panelRight
             // 
             this.panelRight.BorderRadius = 15;
+            this.panelRight.Controls.Add(this.label2);
+            this.panelRight.Controls.Add(this.btnclose);
             this.panelRight.Controls.Add(this.label1);
             this.panelRight.Controls.Add(this.guna2Shapes3);
             this.panelRight.Controls.Add(this.guna2Shapes2);
@@ -56,7 +62,7 @@
             this.panelRight.Controls.Add(this.txtPassword);
             this.panelRight.Controls.Add(this.txtUseName);
             this.panelRight.FillColor = System.Drawing.Color.White;
-            this.panelRight.Location = new System.Drawing.Point(4, 3);
+            this.panelRight.Location = new System.Drawing.Point(3, 1);
             this.panelRight.Margin = new System.Windows.Forms.Padding(4);
             this.panelRight.Name = "panelRight";
             this.panelRight.Padding = new System.Windows.Forms.Padding(80, 74, 80, 74);
@@ -131,20 +137,6 @@
             this.guna2Separator4.Size = new System.Drawing.Size(100, 37);
             this.guna2Separator4.TabIndex = 11;
             this.guna2Separator4.UseTransparentBackground = true;
-            // 
-            // requiredFieldValidator1
-            // 
-            this.requiredFieldValidator1.CancelFocusChangeWhenInvalid = false;
-            this.requiredFieldValidator1.ControlToValidate = this.txtUseName;
-            this.requiredFieldValidator1.ErrorMessage = "نام کاربری را وارد کنید";
-            this.requiredFieldValidator1.Icon = ((System.Drawing.Icon)(resources.GetObject("requiredFieldValidator1.Icon")));
-            // 
-            // requiredFieldValidator2
-            // 
-            this.requiredFieldValidator2.CancelFocusChangeWhenInvalid = false;
-            this.requiredFieldValidator2.ControlToValidate = this.txtPassword;
-            this.requiredFieldValidator2.ErrorMessage = "رمز عبور را وارد کنید";
-            this.requiredFieldValidator2.Icon = ((System.Drawing.Icon)(resources.GetObject("requiredFieldValidator2.Icon")));
             // 
             // btnLogin
             // 
@@ -221,18 +213,61 @@
             this.txtUseName.Size = new System.Drawing.Size(496, 68);
             this.txtUseName.TabIndex = 0;
             // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // btnclose
+            // 
+            this.btnclose.BackColor = System.Drawing.Color.Transparent;
+            this.btnclose.Image = global::Golabgiri.App.Properties.Resources.icons8_close_24px;
+            this.btnclose.ImageRotate = 0F;
+            this.btnclose.Location = new System.Drawing.Point(551, 8);
+            this.btnclose.Name = "btnclose";
+            this.btnclose.Size = new System.Drawing.Size(25, 23);
+            this.btnclose.TabIndex = 46;
+            this.btnclose.TabStop = false;
+            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.Location = new System.Drawing.Point(152, 137);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(300, 28);
+            this.label2.TabIndex = 47;
+            this.label2.Text = "برای ورود به سیستم رمز عبور خود را وارد کنید";
+            // 
+            // requiredFieldValidator1
+            // 
+            this.requiredFieldValidator1.CancelFocusChangeWhenInvalid = false;
+            this.requiredFieldValidator1.ControlToValidate = this.txtUseName;
+            this.requiredFieldValidator1.ErrorMessage = "نام کاربری را وارد کنید";
+            this.requiredFieldValidator1.Icon = ((System.Drawing.Icon)(resources.GetObject("requiredFieldValidator1.Icon")));
+            // 
+            // requiredFieldValidator2
+            // 
+            this.requiredFieldValidator2.CancelFocusChangeWhenInvalid = false;
+            this.requiredFieldValidator2.ControlToValidate = this.txtPassword;
+            this.requiredFieldValidator2.ErrorMessage = "رمز عبور را وارد کنید";
+            this.requiredFieldValidator2.Icon = ((System.Drawing.Icon)(resources.GetObject("requiredFieldValidator2.Icon")));
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(590, 547);
+            this.ClientSize = new System.Drawing.Size(589, 547);
             this.Controls.Add(this.panelRight);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panelRight.ResumeLayout(false);
             this.panelRight.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnclose)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -250,6 +285,9 @@
         private Guna.UI2.WinForms.Guna2TextBox txtUseName;
         private ValidationComponents.RequiredFieldValidator requiredFieldValidator1;
         private ValidationComponents.RequiredFieldValidator requiredFieldValidator2;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2PictureBox btnclose;
     }
 }
 

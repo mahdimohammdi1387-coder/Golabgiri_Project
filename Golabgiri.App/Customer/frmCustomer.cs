@@ -35,8 +35,8 @@ namespace Golabgiri.App
             {
                 string debit = PointSeprator.RemoveTrailingZeros(item.debit);
                 string credit = PointSeprator.RemoveTrailingZeros(item.credit);
-                dgvCustomer.Rows.Add(item.Id, item.name +" "+ item.family, item.phoneNumber, SepCama.Cama(credit),
-                   item.address, SepCama.Cama(debit),"ریال",item.CustomerType);
+                dgvCustomer.Rows.Add(item.Id, item.name +" "+ item.family, item.phoneNumber, item.address, SepCama.Cama(credit),
+                    SepCama.Cama(debit), "ریال",item.CustomerType);
             }
         }
         private void frmCustomer_Load(object sender, EventArgs e)
@@ -71,7 +71,6 @@ namespace Golabgiri.App
                 {
 
                     frm.txtname.Text = customer.name;
-                    frm.ID = customer.Id;
                     frm.txtfamily.Text = customer.family;
                     frm.txtphonenumber.Text = customer.phoneNumber;
                 }
@@ -82,7 +81,9 @@ namespace Golabgiri.App
                     frm.txtcompanny.Text = customer.name;
                     frm.txtcompanyphne.Text = customer.phoneNumber;
                 }
-                   
+                frm.ID = customer.Id;
+                frm.debit= customer.debit;
+                frm.credit= customer.credit;
                 frm.txtAddress.Text = customer.address;
                 frm.status = true;
                 if (frm.ShowDialog() == DialogResult.OK)

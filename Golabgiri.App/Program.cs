@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Golabgiri.App.Customer;
 using Golabgiri.App.Mapper;
+using Golabgiri.App.Product;
 using Golabgiri.BLL.Mapper;
 using Golabgiri.BLL.Registration;
 using Microsoft.Extensions.DependencyInjection;
@@ -33,6 +34,7 @@ namespace Golabgiri.App
             services.AddTransient<frmAddOrEditcustomer>();
             services.AddTransient<frmselecttypecustomer>();
             services.AddTransient<frmCustomer>();
+            services.AddTransient<frmProduct>();
 
             var serviceProvider = services.BuildServiceProvider();
 
