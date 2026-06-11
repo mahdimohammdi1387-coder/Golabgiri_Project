@@ -163,6 +163,16 @@ namespace Golabgiri.App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_add_key_40px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_add_key_40px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Address_64px {
             get {
                 object obj = ResourceManager.GetObject("icons8_Address_64px", resourceCulture);
@@ -253,9 +263,29 @@ namespace Golabgiri.App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_receipt_100px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_receipt_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_refund_48px {
             get {
                 object obj = ResourceManager.GetObject("icons8_refund_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_settings_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_settings_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -336,6 +366,16 @@ namespace Golabgiri.App.Properties {
         internal static System.Drawing.Bitmap تصویر_صفحه_2026_06_11_204304 {
             get {
                 object obj = ResourceManager.GetObject("تصویر صفحه 2026-06-11 204304", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap تصویر_صفحه_2026_06_12_025219 {
+            get {
+                object obj = ResourceManager.GetObject("تصویر صفحه 2026-06-12 025219", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
