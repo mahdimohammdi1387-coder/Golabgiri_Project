@@ -44,5 +44,10 @@ namespace Glabgiri.DAL.UnitOfWork
         {
              _db.Dispose();
         }
+
+        public void Save()
+        {
+            _db.SaveChanges();
+        }
     }
 }

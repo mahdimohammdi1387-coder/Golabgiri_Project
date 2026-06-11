@@ -12,6 +12,7 @@ namespace Glabgiri.DAL.UnitOfWork
         ICustomerRepository CustomerRepository { get; }
         ILoginRepository LoginRepository { get; }
         Task SaveAsync();
+        void Save();
         void Dispose();
     }
 }
