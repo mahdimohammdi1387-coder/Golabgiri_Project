@@ -10,5 +10,7 @@ namespace Golabgiri.BLL.IServices
     public interface IProductService
     {
         Task<IEnumerable<ProductDTO>> GetProductAsync(string search="");
+        Task<bool> InsertProductAsync(ProductDTO productDTO);
+        Task<bool> UpdateProductAsync(ProductDTO productDTO);
     }
 }

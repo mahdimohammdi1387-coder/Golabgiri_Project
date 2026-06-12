@@ -10,6 +10,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using Golabgiri.ViewModel.DTO.ProductDTO;
+using Golabgiri.ViewModel.DTO.UnitDTo;
 
 namespace Golabgiri.BLL.Mapper
 {
@@ -38,6 +39,11 @@ namespace Golabgiri.BLL.Mapper
                 .ForMember(dest => dest.Unit, opt => opt.MapFrom(src => src.ProductUnit.UnitName))
                 .ForMember(dest => dest.price, opt => opt.MapFrom(src => src.UnitPrice))
                 .ForMember(dest => dest.description, opt => opt.MapFrom(src => src.Description))
+                .ReverseMap();
+
+            CreateMap<ProductUnit, UnitDTO>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.UnitName))
                 .ReverseMap();
         }
     }

@@ -35,6 +35,7 @@ namespace Golabgiri.App
             services.AddTransient<frmselecttypecustomer>();
             services.AddTransient<frmCustomer>();
             services.AddTransient<frmProduct>();
+            services.AddTransient<frmAddOrEditproduct>();
 
             var serviceProvider = services.BuildServiceProvider();
 

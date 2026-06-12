@@ -47,5 +47,12 @@ namespace Golabgiri.App.Product
         {
             this.Close();
         }
+
+        private void btnnewProduct_Click(object sender, EventArgs e)
+        {
+            var frm = _serviceProvider.GetRequiredService<frmAddOrEditproduct>();
+            if (frm.ShowDialog() == DialogResult.OK)
+                product_Load();
+        }
     }
 }

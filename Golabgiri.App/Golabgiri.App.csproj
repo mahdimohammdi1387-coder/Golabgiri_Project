@@ -170,6 +170,12 @@
       <DependentUpon>mainform.cs</DependentUpon>
     </Compile>
     <Compile Include="Mapper\AutoMapperConfig.cs" />
+    <Compile Include="Product\frmAddOrEditproduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\frmAddOrEditproduct.Designer.cs">
+      <DependentUpon>frmAddOrEditproduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Product\frmProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="mainform.resx">
       <DependentUpon>mainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\frmAddOrEditproduct.resx">
+      <DependentUpon>frmAddOrEditproduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Product\frmProduct.resx">
       <DependentUpon>frmProduct.cs</DependentUpon>

@@ -94,6 +94,7 @@
   <ItemGroup>
     <Compile Include="Context\AraghijatDbContext.cs" />
     <Compile Include="IRepositories\IProductRepository.cs" />
+    <Compile Include="IRepositories\IUnitRepository.cs" />
     <Compile Include="Migrations\202606072122157_Add_CustomerType.cs" />
     <Compile Include="Migrations\202606072122157_Add_CustomerType.Designer.cs">
       <DependentUpon>202606072122157_Add_CustomerType.cs</DependentUpon>
@@ -103,6 +104,7 @@
       <DependentUpon>202606080713036_Change_Customer.cs</DependentUpon>
     </Compile>
     <Compile Include="Repositories\ProductRepository.cs" />
+    <Compile Include="Repositories\UnitRepository.cs" />
     <Compile Include="UnitOfWork\IUnitOfWork.cs" />
     <Compile Include="UnitOfWork\UnitOfWork.cs" />
     <Compile Include="IRepositories\ICustomerRepository.cs" />

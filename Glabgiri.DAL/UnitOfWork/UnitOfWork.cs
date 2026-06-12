@@ -17,6 +17,7 @@ namespace Glabgiri.DAL.UnitOfWork
         private ILoginRepository _loginrepository;
         private ICustomerRepository _customerrepository;
         private IProductRepository _productRepository;
+        private IUnitRepository _unitRepository;
         public UnitOfWork()
         {
             _db = new AraghijatDbContext();
@@ -28,6 +29,13 @@ namespace Glabgiri.DAL.UnitOfWork
                     _loginrepository=new LoginRepository(_db);
                 return _loginrepository;
             } 
+        }
+        public IUnitRepository UnitRepository { get 
+            {
+            if(_unitRepository==null)
+                    _unitRepository=new UnitRepository(_db);
+            return _unitRepository;
+            }
         }
        
         public ICustomerRepository CustomerRepository

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Glabgiri.DAL.UnitOfWork;
 using Golabgiri.BLL.IServices;
+using Golabgiri.Domain.Entities;
 using Golabgiri.ViewModel.DTO.ProductDTO;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,34 @@ namespace Golabgiri.BLL.Services
             {
 
                 return null;
+            }
+        }
+
+        public async Task<bool> InsertProductAsync(ProductDTO productDTO)
+        {
+            try
+            {
+                await _db.ProductRepository.Insert(_mapper.Map<Product>(productDTO));
+                return true;
+            }
+            catch 
+            {
+
+                return false;
+            }
+        }
+
+        public async Task<bool> UpdateProductAsync(ProductDTO productDTO)
+        {
+            try
+            {
+                await _db.ProductRepository.Update(_mapper.Map<Product>(productDTO));
+                return true;
+            }
+            catch
+            {
+                return false;
+                throw;
             }
         }
     }

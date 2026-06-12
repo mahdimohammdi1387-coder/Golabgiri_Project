@@ -34,11 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvProduct = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.txtSearch = new System.Windows.Forms.ToolStripTextBox();
-            this.btnsharzh = new System.Windows.Forms.ToolStripButton();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Mobayl = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,8 +41,13 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.txtSearch = new System.Windows.Forms.ToolStripTextBox();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnclose = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnnewProduct = new System.Windows.Forms.ToolStripButton();
+            this.btnEdit = new System.Windows.Forms.ToolStripButton();
             this.GenrationProduct = new System.Windows.Forms.ToolStripButton();
             this.btnNewGeneration = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
@@ -138,57 +138,6 @@
             this.dgvProduct.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(143)))), ((int)(((byte)(107)))));
             this.dgvProduct.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
-            // toolStrip1
-            // 
-            this.toolStrip1.AutoSize = false;
-            this.toolStrip1.BackColor = System.Drawing.Color.Bisque;
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnnewProduct,
-            this.btnsharzh,
-            this.toolStripLabel1,
-            this.txtSearch,
-            this.GenrationProduct,
-            this.btnNewGeneration});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(798, 97);
-            this.toolStrip1.TabIndex = 6;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripLabel1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(63, 94);
-            this.toolStripLabel1.Text = "جستجو:";
-            this.toolStripLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolStripLabel1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtSearch.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(109, 97);
-            // 
-            // btnsharzh
-            // 
-            this.btnsharzh.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsharzh.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnsharzh.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnsharzh.Name = "btnsharzh";
-            this.btnsharzh.Size = new System.Drawing.Size(128, 94);
-            this.btnsharzh.Text = "وضعیت شارژ کالا";
-            this.btnsharzh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.TargetControl = this;
-            // 
             // id
             // 
             this.id.DataPropertyName = "ID";
@@ -245,6 +194,47 @@
             this.description.Name = "description";
             this.description.ReadOnly = true;
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.AutoSize = false;
+            this.toolStrip1.BackColor = System.Drawing.Color.Bisque;
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnnewProduct,
+            this.btnEdit,
+            this.toolStripLabel1,
+            this.txtSearch,
+            this.GenrationProduct,
+            this.btnNewGeneration});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(798, 97);
+            this.toolStrip1.TabIndex = 6;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabel1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(63, 94);
+            this.toolStripLabel1.Text = "جستجو:";
+            this.toolStripLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolStripLabel1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtSearch.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(109, 97);
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.TargetControl = this;
+            // 
             // btnclose
             // 
             this.btnclose.Image = global::Golabgiri.App.Properties.Resources.icons8_close_24px;
@@ -266,6 +256,18 @@
             this.btnnewProduct.Size = new System.Drawing.Size(87, 94);
             this.btnnewProduct.Text = "افزودن کالا";
             this.btnnewProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnnewProduct.Click += new System.EventHandler(this.btnnewProduct_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Image = global::Golabgiri.App.Properties.Resources._1371475973_document_edit;
+            this.btnEdit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(93, 94);
+            this.btnEdit.Text = "ویرایش کالا";
+            this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // GenrationProduct
             // 
@@ -321,7 +323,7 @@
         private System.Windows.Forms.ToolStripTextBox txtSearch;
         private System.Windows.Forms.ToolStripButton GenrationProduct;
         private System.Windows.Forms.ToolStripButton btnNewGeneration;
-        private System.Windows.Forms.ToolStripButton btnsharzh;
+        private System.Windows.Forms.ToolStripButton btnEdit;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2PictureBox btnclose;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
