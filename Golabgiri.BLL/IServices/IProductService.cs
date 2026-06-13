@@ -12,5 +12,6 @@ namespace Golabgiri.BLL.IServices
         Task<IEnumerable<ProductDTO>> GetProductAsync(string search="");
         Task<bool> InsertProductAsync(ProductDTO productDTO);
         Task<bool> UpdateProductAsync(ProductDTO productDTO);
+        Task SaveAsync();
     }
 }

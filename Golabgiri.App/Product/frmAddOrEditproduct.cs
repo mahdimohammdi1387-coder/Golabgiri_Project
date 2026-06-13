@@ -1,4 +1,7 @@
 ﻿using Golabgiri.BLL.IServices;
+using Golabgiri.BLL.Services;
+using Golabgiri.Utility.NumberOnly;
+using Golabgiri.ViewModel.DTO.ProductDTO;
 using Golabgiri.ViewModel.DTO.UnitDTo;
 using System;
 using System.Collections.Generic;
@@ -48,13 +51,39 @@ namespace Golabgiri.App.Product
         {
             this.Close();
         }
-
-        private void btnsabt_Click(object sender, EventArgs e)
+        public decimal price = 0;
+        private async void btnsabt_Click(object sender, EventArgs e)
         {
             if (BaseValidator.IsFormValid(this.components))
             {
-
+                if (cmbunit.SelectedIndex != 0)
+                {
+                    ProductDTO productDTO = new ProductDTO();
+                    productDTO.Name = txtname.Text;
+                    productDTO.Value=decimal.Parse(txtvalue.Text);
+                    productDTO.description = txtdescription.Text;
+                    productDTO.UnitId = 1;
+                    if(price==0)
+                    {
+                        productDTO.price = 0;
+                        await _productservice.InsertProductAsync(productDTO);
+                    }
+                    else
+                    {
+                        productDTO.price = price;
+                        await _productservice.UpdateProductAsync(productDTO);
+                    }
+                    await _productservice.SaveAsync();
+                    DialogResult = DialogResult.OK;
+                }
+                else
+                    RtlMessageBox.Show("ابتدا واحد محصول را انتخاب کنید","توجه",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
+        }
+
+        private void txtvalue_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled=NumberOnly.Only(e.KeyChar);
         }
     }
 }

@@ -14,5 +14,6 @@ namespace Golabgiri.ViewModel.DTO.ProductDTO
         public string Unit { get; set; }
         public decimal price { get; set; }
         public string description { get; set; }
+        public int UnitId { get; set; }
     }
 }

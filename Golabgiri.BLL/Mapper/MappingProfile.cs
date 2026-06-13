@@ -37,6 +37,7 @@ namespace Golabgiri.BLL.Mapper
                 .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.ProductName))
                 .ForMember(dest => dest.Value, opt => opt.MapFrom(src => src.Value))
                 .ForMember(dest => dest.Unit, opt => opt.MapFrom(src => src.ProductUnit.UnitName))
+                .ForMember(dest => dest.UnitId, opt => opt.MapFrom(src => src.ProductUnitId))
                 .ForMember(dest => dest.price, opt => opt.MapFrom(src => src.UnitPrice))
                 .ForMember(dest => dest.description, opt => opt.MapFrom(src => src.Description))
                 .ReverseMap();

@@ -80,7 +80,7 @@
             this.txtvalue.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.txtvalue.BorderRadius = 12;
             this.txtvalue.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtvalue.DefaultText = "";
+            this.txtvalue.DefaultText = "0";
             this.txtvalue.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtvalue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtvalue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -94,11 +94,13 @@
             this.txtvalue.Margin = new System.Windows.Forms.Padding(4, 11, 4, 11);
             this.txtvalue.Name = "txtvalue";
             this.txtvalue.PlaceholderForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.txtvalue.PlaceholderText = ".....نام کالا را وارد کنید";
+            this.txtvalue.PlaceholderText = ".....مقدار کالا را وارد کنید";
+            this.txtvalue.ReadOnly = true;
             this.txtvalue.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtvalue.SelectedText = "";
-            this.txtvalue.Size = new System.Drawing.Size(704, 56);
+            this.txtvalue.Size = new System.Drawing.Size(694, 56);
             this.txtvalue.TabIndex = 18;
+            this.txtvalue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtvalue_KeyPress);
             // 
             // txtname
             // 
@@ -123,7 +125,7 @@
             this.txtname.PlaceholderText = ".....نام کالا را وارد کنید";
             this.txtname.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtname.SelectedText = "";
-            this.txtname.Size = new System.Drawing.Size(704, 59);
+            this.txtname.Size = new System.Drawing.Size(696, 59);
             this.txtname.TabIndex = 16;
             // 
             // btnclose
@@ -173,7 +175,7 @@
             this.txtdescription.PlaceholderText = " .....توضیحاتی برای کالا اضافه کنید(اختیاری)";
             this.txtdescription.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtdescription.SelectedText = "";
-            this.txtdescription.Size = new System.Drawing.Size(704, 187);
+            this.txtdescription.Size = new System.Drawing.Size(694, 187);
             this.txtdescription.TabIndex = 20;
             // 
             // lblsubject
@@ -202,7 +204,7 @@
             this.cmbunit.ItemHeight = 30;
             this.cmbunit.Location = new System.Drawing.Point(18, 371);
             this.cmbunit.Name = "cmbunit";
-            this.cmbunit.Size = new System.Drawing.Size(684, 36);
+            this.cmbunit.Size = new System.Drawing.Size(682, 36);
             this.cmbunit.TabIndex = 23;
             // 
             // label3

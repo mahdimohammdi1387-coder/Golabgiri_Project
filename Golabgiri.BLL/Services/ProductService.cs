@@ -47,6 +47,11 @@ namespace Golabgiri.BLL.Services
             }
         }
 
+        public async Task SaveAsync()
+        {
+            await _db.SaveAsync();
+        }
+
         public async Task<bool> UpdateProductAsync(ProductDTO productDTO)
         {
             try
